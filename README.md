@@ -1,4 +1,4 @@
-# Restaurant-App🍔
+# Restaurants-App🍔
 ### Features ✨
 - ✅ Can Add Items to Order
 - ✅ Can Remove Items from Order
