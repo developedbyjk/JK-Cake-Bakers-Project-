@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
+body 
+{
+	font-family: 'Smythe', cursive;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    overflow: hidden;
+    padding-top: 50px;
+    padding-left: 10px;
+    height: 167px;
+    width: 100%;
+    background-size: cover;
+    color: white;
+    background-image: url('https://i.postimg.cc/J7FW7sxw/gp4k2jro-burgers-625x300-20-June-22.jpg');
+}
+
+.container{
+    margin: 30px;
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.226);
+    /* background-color: aliceblue; */
+}
+
+
+.emoji, .add{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.emoji{
+    flex-grow: 1;
+    width: 80px;
+
+}
+
+.item{
+    flex-grow: 2;
+    /* background-color: yellow; */
+
+}
+
+.item-name{
+    font-size: 1.3rem;
+}
+.item-ingeridents{
+  color: gary;
+  opacity: 0.5;
+}
+
+.item-price{
+  margin-top: 3px;
+}
+
+
+.add{
+    flex-grow: 1;
+}
+
+.add button{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid gray;
+    background-color: transparent;
+}
+
+
+.order-section{
+    /* background-color: blueviolet; */
+    width: 85%;
+    margin: auto;
+    font-size:1.3rem;
+}
+.o-s-item{
+    display: flex;
+    margin: 15px 0px;
+}
+
+.o-s-i-remove{
+    font-size: 0.7rem;
+    opacity: 0.5;
+    margin-left: 5px;
+    line-height: 30px;
+    
+}
+
+
+.o-s-i-price{
+    margin-right: 20px;
+    margin-left: auto;
+}
+.order-section button{
+    width: 100%;
+    outline: 0;
+    padding: 15px 0px;
+    border: none;
+    background-color: #16DB99;
+    color: white;
+}
+
+
+.detail-popup{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aliceblue;
+    text-align: center;
+    padding: 50px 10px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    display: none;
+}
+
+.detail-popup input {
+    
+    z-index: 99;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid gainsboro;
+    
+}
+#submit{
+    background-color: #16DB99;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+.detail-popup b{
+    margin-bottom: 10px;
+}
+
+
+.say-thanks{
+    margin-left: auto;
+    margin-right: auto;
+    height: 120;
+    width: 85%;
+    border-radius: 3px;
+    background-color: #ECFDF5;
+    color : #065f46;
+    font-family: 'Smythe', cursive;
+    padding: 30px 20px;
+    text-align: center;
+}
