@@ -42,6 +42,7 @@ document.addEventListener("click",function(e){
     if(e.target.id){
         console.log("you clicked the  >> " + e.target.id)
         addToCart(e.target.id)
+        hidecat()
        
     }
     else if(e.target.dataset.myid){
@@ -55,6 +56,7 @@ document.addEventListener("click",function(e){
 
 
 function addToCart(id){
+    document.querySelector(".order-section").style.display = "block";
    const fetchedItem =  menuArray.filter(function(items){
         return items.id == id
     })[0]
@@ -84,6 +86,9 @@ function pushToNewArray(items){
     getFromAnotherArray()
 }
 
+function hidecat(){
+    document.getElementById('hideme').style.display = "none";
+}
 
 function getFromAnotherArray(){
     let totalPrice = 0;
@@ -94,8 +99,9 @@ function getFromAnotherArray(){
 
                     feedNewItems += `
         
-                    <div class="o-s-item">
-                        <p class="o-s-i-name">$${items.name}</p>
+                    <div class="o-s-item animate__animated animate__fadeInUp" >
+                        <div >${ items.emoji}</div>
+                        <p class="o-s-i-name">${items.name}</p>
                          <p class="o-s-i-remove" " data-myid="${items.id}">remove</p>
                         <p class="o-s-i-price">$${items.price}</p>
                     </div>`
@@ -116,7 +122,7 @@ function totalCost(totalPrice){
         <p class="o-s-i-price">$${totalPrice}</p>
     </div>
 
-    <button data-credentials="sdf"}>Complete Order</button>
+    <button  data-credentials="sdf"}>Complete Order</button>
     `
 }
 
@@ -125,7 +131,7 @@ function handelRemove(id){
     const removeItem =  arrayForOder.filter(function(items){
         return items.id == id
     })[0]
-    alert("are you sure you want to remove" + removeItem.id)
+    // alert("are you sure you want to remove" + removeItem.id)
     console.log("before removation")
     console.log(arrayForOder)
     const idToDelete = removeItem.id;
@@ -151,31 +157,20 @@ console.log(arrayForOder)
 
 
 function detailPopUp(){
-    document.getElementById("detail-popup").style.display = "block";
+    document.getElementById("order-section").innerHTML=`
+        <div class="hideme  animate__animated animate__lightSpeedInRight" id="hideme">
+                <img src="cat.webp" id="catimg" alt="cat">
+                
+            </div>
+    <div class="say-thanks animate__animated animate__lightSpeedInRight"> Meooowwwwww! Your Order is on its way!</div>
+
+    `
 }
 
 
 
 
 
-const getForm = document.getElementById("myform");
-
-getForm.addEventListener('submit', function(e){
-    e.preventDefault()
-
-    const NameInForm = new FormData(getForm)
-    
-    const myname = NameInForm.get('name')
-    
-    document.getElementById("detail-popup").style.display = "none";
-    document.getElementById("order-section").innerHTML=`
-    
-    <div class="say-thanks">Thanks ${myname}! Your Order is on its way!</div>
-
-    `
-
-
-})
 
 
  })

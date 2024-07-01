@@ -8,26 +8,52 @@ body
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #f6efe7;
+}
 
 header{
     overflow: hidden;
-    padding-top: 50px;
-    padding-left: 10px;
-    height: 167px;
+   
+    padding-left: 50px;
+    height: 200px;
     width: 100%;
-    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+   
+
+    background-size:contain;
     color: white;
-    background-image: url('https://i.postimg.cc/J7FW7sxw/gp4k2jro-burgers-625x300-20-June-22.jpg');
+    /* background-image: url('https://i.postimg.cc/J7FW7sxw/gp4k2jro-burgers-625x300-20-June-22.jpg'); */
+    background-image: url('https://img.freepik.com/free-vector/hand-drawn-pattern-background_23-2150829919.jpg?size=626&ext=jpg&ga=GA1.1.2113030492.1719705600&semt=ais_user');
+}
+
+header h1 {
+    font-size: 2.5rem;
+    /* color: #b58757; */
+    color: black;
+}
+header p {
+    color: black;
+    font-size: 1.5rem;
 }
 
 .container{
     margin: 30px;
     display: flex;
+    
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.226);
     /* background-color: aliceblue; */
+    align-items: center;
 }
 
+/* #main{
+    margin-top: 350px;
+} */
 
 .emoji, .add{
     display:flex;
@@ -39,11 +65,12 @@ header{
 .emoji{
     flex-grow: 1;
     width: 80px;
+    /* background-color: pink; */
 
 }
 
 .item{
-    flex-grow: 2;
+    width: 100px;
     /* background-color: yellow; */
 
 }
@@ -62,7 +89,8 @@ header{
 
 
 .add{
-    flex-grow: 1;
+ 
+    /* background-color: #16DB99; */
 }
 
 .add button{
@@ -75,12 +103,56 @@ header{
 }
 
 
-.order-section{
-    /* background-color: blueviolet; */
+/* .order-section{
+   
+    
+    position: fixed;
+    bottom: 0;
     width: 85%;
     margin: auto;
+    background-color:#fcd3a7;
+  
     font-size:1.3rem;
+} */
+
+.order-section{
+    display: none;
+    overflow:scroll;
+    background-color: #ffefc6;
+    position: fixed;
+    bottom: 0;
+    height:auto;
+    max-height: 200px;
+    margin: 20px;
+    width: 90%;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 }
+
+.emoji{
+    max-width: 100px;
+}
+.item{
+    width: 50%;
+  
+
+}
+
+
+
+
+#catimg{
+    height: 110px;
+    position: fixed;
+  
+
+    /* position: absolute;
+    top: 0;
+    z-index: 9; */
+}
+
 .o-s-item{
     display: flex;
     margin: 15px 0px;
@@ -104,53 +176,28 @@ header{
     outline: 0;
     padding: 15px 0px;
     border: none;
-    background-color: #16DB99;
+    background-color: #432818;
     color: white;
-}
-
-
-.detail-popup{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: aliceblue;
-    text-align: center;
-    padding: 50px 10px;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    display: none;
-}
-
-.detail-popup input {
-    
-    z-index: 99;
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0px;
     border-radius: 5px;
-    outline: none;
-    border: 1px solid gainsboro;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#submit{
-    background-color: #16DB99;
-    outline: none;
-    border: none;
-    color: white;
+.order-section h2{
+    text-align: center;
 }
+
+
+
 
 .detail-popup b{
     margin-bottom: 10px;
 }
 
+.hideme{
+    display: block;
+}
 
 .say-thanks{
-    margin-left: auto;
+    /* margin-left: auto;
     margin-right: auto;
     height: 120;
     width: 85%;
@@ -159,5 +206,86 @@ header{
     color : #065f46;
     font-family: 'Smythe', cursive;
     padding: 30px 20px;
+    text-align: center; */
+  text-align: center;
+    margin-top: 50px;
+    font-family: 'Smythe', cursive;
     text-align: center;
+    font-size: 1rem;
+    margin-left: 50%;
 }
+
+@media only screen and (min-width: 426px) {
+    body {
+      /* background-color: lightblue; */
+    }
+    header{
+        height: 200px;
+    }
+    .emoji{
+        max-width: 250px;
+    }
+
+    .container{
+        width: 50%;
+    }
+    .item{
+        width: 70%;
+    }
+
+    .order-section::-webkit-scrollbar {
+        display: none;
+      }
+      
+    .order-section{
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow:scroll;
+        background-color: #ffe6a782;
+        position: fixed;
+        right: 20px;
+        height:auto;
+        max-height: 400px;
+        margin: 30px;
+        width: 600px;
+        padding: 50px 70px;
+        border-radius: 15px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    }
+    #catimg{
+        margin-top: 50px;
+        height: 150px;
+        position: relative;
+      
+    }
+    .hideme{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        display: block;
+        text-align: center;
+   }
+   .say-thanks{
+    /* margin-left: auto;
+    margin-right: auto;
+    height: 120;
+    width: 85%;
+    border-radius: 3px;
+    background-color: #ECFDF5;
+    color : #065f46;
+    font-family: 'Smythe', cursive;
+    padding: 30px 20px;
+    text-align: center; */
+    margin-top: 50px;
+    font-family: 'Smythe', cursive;
+    text-align: center;
+
+    margin-left: 0px;
+    font-size: 1.5rem;
+}
+  }
